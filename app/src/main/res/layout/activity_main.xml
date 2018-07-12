@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.projects.school.androidattendancesysmte.MainActivity">
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/appbars"
+    android:background="@drawable/tolbar_gradient"
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mtolbars"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        />
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:id="@+id/linearlayout1"
+        android:layout_below="@+id/appbars"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textview_class"
+            android:text="3rd sem"
+            android:layout_weight="2"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date :"
+            android:textSize="15dp"
+            android:layout_weight="0"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textview_date"
+            android:text="2017/08/05"
+            android:textSize="15dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <!--<view-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student's List"
+        android:id="@+id/mtextview_students"
+        android:layout_below="@id/linearlayout1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollIndicators="right"
+        android:layout_above="@+id/mbtn_submit"
+        android:layout_below="@+id/mtextview_students"
+        android:id="@+id/mrecycler_view"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mbtn_submit"
+        android:text="Submit"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tolbar_gradient"
+        android:layout_margin="10dp"
+        android:textColor="@color/cardview_light_background"
+        />
+</RelativeLayout>
